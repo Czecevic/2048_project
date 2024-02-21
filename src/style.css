@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+  font-family: monospace;
+  text-align: center;
+  background-color: black;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 98vh;
+  margin: 0 40px;
+}
+
+.container h1 {
+  color: aliceblue;
+  font-size: 45px;
+}
+
+.sous-container {
+  width: 100%;
+}
+
+.game-board {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 4px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 8px;
+  padding: 4px;
+  height: 100px;
+}
+
+.looseGame {
+  position: absolute;
+  top: 20%;
+  background: black;
+  padding: 240px 250px;
+}
+
+.looseGame h1 {
+  background: none;
+}
+
+.looseGame button,
+.looseGame button a {
+  background: none;
+  border-radius: 5px;
+  padding: 20px;
+  text-decoration: none;
+  color: aliceblue;
+  font-size: 20px;
+}
+
+.looseGame button:hover,
+.looseGame button a:hover {
+  background: white;
+  color: black;
+}
+
+.cell {
+  padding: 10px;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+}
+
+.cell-2 {
+  background-color: orange;
+}
+
+.cell-4 {
+  background-color: rgb(39, 207, 207);
+}
+
+.cell-8 {
+  background-color: pink;
+}
+
+.cell-16 {
+  background-color: palevioletred;
+}
+
+.cell-32 {
+  background-color: greenyellow;
+}
+
+.cell-64 {
+  background-color: burlywood;
+}
+
+.cell-128 {
+  background-color: goldenrod;
+}
+
+.cell-256 {
+  background-color: rebeccapurple;
+}
+
+.cell-512 {
+  background-color: cyan;
+}
+
+.cell-1024 {
+  background-color: gold;
+}
+
+.cell-2048 {
+  background-color: aquamarine;
+}
