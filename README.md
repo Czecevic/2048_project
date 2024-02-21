@@ -1,30 +1,33 @@
-# React + TypeScript + Vite
+# 2048 project [EN]
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React Project from 2021 updated in typescript
 
-Currently, two official plugins are available:
+## install
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+(first of all, you need to have nod installed on your device)
+To lanch the game:
 
-## Expanding the ESLint configuration
+- 1. `npm i` or `npm install`
+- 2. `npm run dev`
+- 3. play with the directional arrows (←, ↑, →, ↓)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## fonctionnement
 
-- Configure the top-level `parserOptions` property like this:
+The aim is to drag tiles across a grid, combining tiles of the same value to create a tile with the number 2048. However, once this goal has been reached, the player can continue playing to achieve the highest possible score.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+# 2048 project [FR]
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Projet React datant de 2021 remis à jour en typescript
+
+## installation
+
+(avant tout chose il faut avoir node d'installer sur son appareil)
+Pour lancer le jeu :
+
+- 1. `npm i` ou `npm install`
+- 2. `npm run dev`
+- 3. jouer avec les fleches directionnelles (←, ↑, →, ↓)
+
+## fonctionnement
+
+Le but est de faire glisser des tuiles sur une grille, pour combiner les tuiles de mêmes valeurs et créer ainsi une tuile portant le nombre 2048. Le joueur peut toutefois continuer à jouer après cet objectif atteint pour faire le meilleur score possible.
