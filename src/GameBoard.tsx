@@ -127,10 +127,6 @@ export const moveDown = (board: number[][]) => {
   return rotateLeft(newBoard);
 };
 
-// export const checkWin = (board: number[][]) => {
-//   return hasValue(board, 2048);
-// };
-
 const hasDiff = (board: number[][], updatedBoard: number[][]) => {
   for (let i = 0; i < board.length; i++) {
     for (let j = 0; j < board[i].length; j++) {

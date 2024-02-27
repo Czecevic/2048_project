@@ -18,9 +18,17 @@ const Cell = ({ number }: { number: number }) => {
 const GameControl = () => {
   const [board, setBoard] = useState(generateRandom(getEmptyBoard()));
   const [looseGame, setLooseGame] = useState<boolean>(false);
-
+  const [score, setScore] = useState<{ number: number; display: boolean }>({
+    number: 0,
+    display: true,
+  });
   const move = (direction: string) => {
     let newBoard;
+    score.display === true &&
+      setScore((prevScore) => ({
+        ...prevScore,
+        number: prevScore.number + 1,
+      }));
     switch (direction) {
       case "left":
         newBoard = moveLeft(board);
@@ -44,6 +52,10 @@ const GameControl = () => {
   const checkEndGame = () => {
     if (isOver(board)) {
       setLooseGame(true);
+      setScore((prevScore) => ({
+        ...prevScore,
+        display: (score.display = false),
+      }));
     }
   };
 
@@ -67,6 +79,7 @@ const GameControl = () => {
 
   return (
     <div className="sous-container">
+      <p className="score"> score : {score.number}</p>
       <div className="game-board">
         {board.map((row, i) => (
           <div key={`row-${i}`} className="row">
