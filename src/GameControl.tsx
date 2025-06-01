@@ -8,10 +8,18 @@ import {
   moveUp,
   isOver,
 } from "./GameBoard";
+import { motion } from "framer-motion";
 
 const Cell = ({ number }: { number: number }) => {
   return (
-    <div className={`cell cell-${number}`}>{number > 0 ? number : ""}</div>
+    <motion.div
+      className={`cell cell-${number}`}
+      initial={{ scale: 0.8, opacity: 0 }}
+      animate={{ scale: 1, opacity: 1 }}
+      transition={{ type: "spring", stiffness: 200, damping: 15 }}
+    >
+      {number > 0 ? number : ""}
+    </motion.div>
   );
 };
 
